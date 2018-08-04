@@ -1,0 +1,68 @@
+
+SQL*Loader: Release 11.2.0.2.0 - Production on Wed Aug 1 23:36:30 2018
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   TransactionSync_Loader.ctl
+Data File:      D:\Sid-SparkScala\workspace\datapipeline_demo\src\main\resources\TransactionSync.csv
+  Bad File:     TransactionSync.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table HR.TRANSACTIONSYNC, loaded from every logical record.
+Insert option in effect for this table: INSERT
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+APP_TRANSACTION_ID                  FIRST     *   ,  O(") CHARACTER            
+INTERNAL_MEMBER_ID                   NEXT     *   ,  O(") CHARACTER            
+LOCATION_EXTERNAL_REFERENCE          NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_TYPE_ID                  NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_TIMESTAMP                NEXT     *   ,  O(") CHARACTER            
+ACTIVITY_TIMESTAMP                   NEXT     *   ,  O(") CHARACTER            
+ACTIVITY_APP_DATE                    NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_RETAIL_VALUE             NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_PROFIT_VALUE             NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_BASE_POINT_VALUE         NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_POINT_VALUE              NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_WON_VALUE                NEXT     *   ,  O(") CHARACTER            
+EVENT_NAME                           NEXT     *   ,  O(") CHARACTER            
+ISSUE_AUDIT_USER                     NEXT     *   ,  O(") CHARACTER            
+TRANSACTION_EXTERNAL_REFERENCE       NEXT     *   ,  O(") CHARACTER            
+CANCEL_TIMESTAMP                     NEXT     *   ,  O(") CHARACTER            
+CANCEL_AUDIT_USER                    NEXT     *   ,  O(") CHARACTER            
+
+value used for ROWS parameter changed from 64 to 58
+Record 1: Rejected - Error on table HR.TRANSACTIONSYNC, column APP_TRANSACTION_ID.
+ORA-01722: invalid number
+
+
+Table HR.TRANSACTIONSYNC:
+  100 Rows successfully loaded.
+  1 Row not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 254388 bytes(58 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:           101
+Total logical records rejected:         1
+Total logical records discarded:        0
+
+Run began on Wed Aug 01 23:36:30 2018
+Run ended on Wed Aug 01 23:36:37 2018
+
+Elapsed time was:     00:00:06.68
+CPU time was:         00:00:00.04
